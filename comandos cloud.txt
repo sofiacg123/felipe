@@ -1,0 +1,49 @@
+COMANDOS CLOUD
+
+pip freeze
+para salir de un directorio  cd ..\..
+cd ambientes/cd cloud / cd Scripts 
+activate
+python manage.py runserver
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py shell
+exit()
+
+from app.models import Categoria,Pelicula
+---------------------------------------------------
+c2= Categoria(nombre='romance')
+c2.save ()
+
+c2=Categoria()
+c2.nombre='terror'
+c2.descripcion='categoria mas vista'
+----------------------------------------------------
+cats=Categoria.objects.all()
+cats
+cat2=Categoria.objects.get(nombre='romance')
+cat2 
+cat2.id
+cat2.nombre
+print(cat2)
+-----------------------------------------------------
+from app.models import Categoria, Pelicula
+categorias = Categoria.objects.all()
+cat_accion = categorias[0]
+p1 = Pelicula(titulo='Duro de Matar', year=1987, categoria=cat_accion)
+p1.save()
+p2 = Pelicula(titulo='Arma Mortal', year=1990, categoria=cat_accion)
+p2.save()
+cat_terror = categorias[2]
+p3 = Pelicula(titulo='El Aro', year=2002, categoria=cat_terror)
+p3.save()
+
+
+
+
+
+
+
+
